@@ -3,13 +3,6 @@ import SectionHeader from '@/components/SectionHeader'
 import ScrollReveal from '@/components/ScrollReveal'
 
 // ─── Data ───────────────────────────────────────────────
-const stats = [
-  { value: '500+', label: 'Devices Repaired' },
-  { value: '15+', label: 'Years Experience' },
-  { value: '98%', label: 'Success Rate' },
-  { value: '200+', label: 'Happy Clients' },
-]
-
 const services = [
   {
     id: 'vfd',
@@ -125,161 +118,15 @@ export default function HomePage() {
   return (
     <>
       {/* ═══ HERO ═══════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-hero-gradient noise-overlay">
-        {/* Subtle grid */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-
-        {/* Right accent panel */}
-        <div className="absolute top-0 right-0 w-2/5 h-full bg-gradient-to-bl from-white/5 to-transparent diagonal-divider pointer-events-none" />
-
-        {/* Minimal floating dots */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(4)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 rounded-full bg-brand-gold/25 animate-float"
-              style={{
-                left: `${12 + i * 20}%`,
-                top: `${25 + (i % 2) * 35}%`,
-                animationDelay: `${i * 1.5}s`,
-                animationDuration: `${6 + i}s`,
-              }}
-            />
-          ))}
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto pl-3 pr-4 sm:pl-3 sm:pr-6 lg:pl-0 lg:pr-8 pt-28 pb-20">
-          <div className="grid lg:grid-cols-2 items-center" style={{ gap: '18rem' }}>
-
-            {/* ── Left: Copy ── */}
-            <div>
-              {/* Eyebrow */}
-              <div className="inline-flex items-center gap-2.5 bg-white/8 backdrop-blur-sm border border-white/12 rounded-full px-5 py-2 mb-10">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse-gold flex-shrink-0" />
-                <span className="text-white/70 text-xs font-mono tracking-[0.18em] uppercase">
-                  Industrial Automation Specialists
-                </span>
-              </div>
-
-              {/* Headline — tighter, more authoritative */}
-              <h1
-                className="font-heading text-5xl md:text-6xl lg:text-[4.25rem] text-white leading-[1.05] mb-5"
-                style={{ fontWeight: 800, letterSpacing: '-0.01em' }}
-              >
-                PRECISION REPAIR
-                <br />
-                <span className="text-brand-gold">FOR INDUSTRIAL</span>
-                <br />
-                AUTOMATION
-              </h1>
-
-              {/* Gold rule */}
-              <div className="w-10 h-0.5 bg-brand-gold rounded-full mb-5" />
-
-              <p className="text-white/60 text-[0.9375rem] leading-relaxed max-w-md mb-8 font-body">
-                Expert repair and maintenance for VFDs, PLCs, Servo Drives, Generator Controllers,
-                and all industrial automation systems. Fast turnaround. Guaranteed results.
-              </p>
-
-              {/* CTAs */}
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/contact"
-                  className="btn-gold px-6 py-3.5 rounded-lg font-body text-white text-sm"
-                  style={{ fontWeight: 700 }}
-                >
-                  Get a Free Quote
-                </Link>
-                <Link
-                  href="/services"
-                  className="px-6 py-3.5 rounded-lg font-body text-white/80 text-sm border border-white/20 hover:border-white/50 hover:bg-white/8 hover:text-white transition-all duration-200"
-                  style={{ fontWeight: 500 }}
-                >
-                  Our Services →
-                </Link>
-              </div>
-
-              {/* Quick contact */}
-              <div className="mt-9 pt-7 border-t border-white/10 flex flex-wrap gap-6">
-                <a href="tel:021-34536335" className="flex items-center gap-2 text-white/45 hover:text-white/75 transition-colors text-sm font-body">
-                  <svg className="w-3.5 h-3.5 text-brand-gold flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                  </svg>
-                  021-34536335
-                </a>
-                <a href="mailto:sales@hoakengineers.com" className="flex items-center gap-2 text-white/45 hover:text-white/75 transition-colors text-sm font-body">
-                  <svg className="w-3.5 h-3.5 text-brand-gold flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                  </svg>
-                  sales@hoakengineers.com
-                </a>
-              </div>
-            </div>
-
-            {/* ── Right: Stats card ── */}
-            <div className="hidden lg:block">
-              <div className="relative">
-                <div className="bg-white/7 backdrop-blur-md border border-white/12 rounded-2xl p-7 shadow-blue-glow">
-
-                  {/* Card header */}
-                  <div className="flex items-center gap-3 mb-6 pb-5 border-b border-white/10">
-                    <div className="w-9 h-9 rounded-lg bg-brand-gold/15 border border-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-white/90 text-sm font-body" style={{ fontWeight: 600 }}>Performance Overview</p>
-                      <p className="text-white/35 text-xs font-body tracking-wide">Est. 2009 · Karachi, Pakistan</p>
-                    </div>
-                  </div>
-
-                  {/* Stat grid */}
-                  <div className="grid grid-cols-2 gap-3.5">
-                    {stats.map((stat) => (
-                      <div
-                        key={stat.label}
-                        className="bg-white/5 rounded-xl p-4 border border-white/8 hover:border-brand-gold/25 hover:bg-white/8 transition-all duration-300"
-                      >
-                        <p className="font-heading text-3xl text-brand-gold leading-none mb-1" style={{ fontWeight: 800 }}>
-                          {stat.value}
-                        </p>
-                        <p className="text-white/50 text-xs font-body tracking-wide">{stat.label}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Footer row */}
-                  <div className="mt-5 pt-5 border-t border-white/10 flex items-center justify-between">
-                    <p className="text-white/40 text-xs font-body">Trusted across Pakistan</p>
-                    <div className="flex gap-0.5">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-3 h-3 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating badge */}
-                <div className="absolute -top-3 -right-3 bg-brand-gold rounded-xl px-4 py-2.5 shadow-gold-glow animate-float">
-                  <p className="font-heading text-white text-xs uppercase tracking-wider" style={{ fontWeight: 800 }}>15+ Years</p>
-                  <p className="text-white/80 text-xs font-body">of Excellence</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 animate-bounce">
-          <span className="text-white/30 text-[10px] font-mono tracking-[0.2em] uppercase">Scroll</span>
-          <svg className="w-3.5 h-3.5 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
+      <section className="relative w-full" style={{ height: '100vh' }}>
+        <video
+          src="/hero-video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </section>
 
       {/* ═══ SERVICES OVERVIEW ════════════════════════════ */}
@@ -300,13 +147,8 @@ export default function HomePage() {
               <ScrollReveal key={service.id} delay={i * 80}>
                 <Link href={service.href}>
                   <div className="service-card bg-white rounded-2xl p-7 h-full shadow-sm cursor-pointer group">
-                    {/* Icon */}
-                    <div className="w-14 h-14 rounded-xl bg-brand-blue/8 flex items-center justify-center text-2xl mb-5 group-hover:bg-brand-blue group-hover:scale-110 transition-all duration-300">
-                      <span className="group-hover:grayscale-0">{service.icon}</span>
-                    </div>
-
                     <p className="section-label mb-1">{service.subtitle}</p>
-                    <h3 className="font-heading text-2xl font-800 text-brand-blue-dark mb-3" style={{ fontWeight: 800 }}>
+                    <h3 className="font-heading text-3xl font-800 text-brand-blue-dark mb-3" style={{ fontWeight: 800 }}>
                       {service.title}
                     </h3>
                     <p className="text-brand-gray-mid text-sm leading-relaxed font-body mb-5">
@@ -355,8 +197,7 @@ export default function HomePage() {
             {benefits.map((benefit, i) => (
               <ScrollReveal key={benefit.title} delay={i * 100}>
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 hover:border-brand-gold/30 transition-all duration-300 group text-center">
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <h3 className="font-heading text-xl font-700 text-white mb-3" style={{ fontWeight: 700 }}>
+                  <h3 className="font-heading text-3xl font-700 text-white mb-3" style={{ fontWeight: 700 }}>
                     {benefit.title}
                   </h3>
                   <p className="text-white/60 text-sm leading-relaxed font-body">{benefit.desc}</p>
@@ -455,6 +296,15 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ═══ BANNER IMAGE ════════════════════════════════ */}
+      <section className="w-full">
+        <img
+          src="/banner.jpeg"
+          alt="HOAK Labs Industrial Automation"
+          className="w-full object-contain block"
+        />
       </section>
 
       {/* ═══ CTA BAND ═════════════════════════════════════ */}

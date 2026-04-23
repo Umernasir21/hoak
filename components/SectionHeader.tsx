@@ -25,7 +25,7 @@ export default function SectionHeader({
         </span>
       )}
       <h2
-        className={`font-heading text-4xl md:text-5xl mt-2 leading-tight ${
+        className={`font-heading text-5xl md:text-6xl lg:text-7xl mt-2 leading-tight ${
           light ? 'text-white' : 'text-brand-blue-dark'
         }`}
         style={{ fontWeight: 800 }}

@@ -25,8 +25,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ["'Barlow Condensed'", "'Arial Narrow'", 'sans-serif'],
-        body: ["'DM Sans'", 'system-ui', 'sans-serif'],
+        heading: ["'Century Gothic'", 'CenturyGothic', 'AppleGothic', 'sans-serif'],
+        body: ["'Century Gothic'", 'CenturyGothic', 'AppleGothic', 'sans-serif'],
         mono: ["'DM Mono'", "'Courier New'", 'monospace'],
       },
       backgroundImage: {

@@ -38,40 +38,12 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          {/* SVG Circuit Logo */}
-          <div className="w-10 h-10 relative">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-              <circle cx="8" cy="8" r="3" fill="#f5a800"/>
-              <circle cx="20" cy="4" r="3" fill="#f5a800"/>
-              <circle cx="32" cy="8" r="3" fill="#f5a800"/>
-              <circle cx="8" cy="32" r="3" fill="#f5a800"/>
-              <circle cx="20" cy="36" r="3" fill="#f5a800"/>
-              <circle cx="32" cy="20" r="3" fill="#f5a800"/>
-              <path d="M8 8 L8 20 L20 20" stroke="#f5a800" strokeWidth="2" strokeLinecap="round"/>
-              <path d="M20 4 L20 20" stroke="#f5a800" strokeWidth="2" strokeLinecap="round"/>
-              <path d="M32 8 L32 20" stroke="#f5a800" strokeWidth="2" strokeLinecap="round"/>
-              <path d="M8 32 L20 32 L20 20" stroke="#f5a800" strokeWidth="2" strokeLinecap="round"/>
-              <path d="M20 36 L20 32" stroke="#f5a800" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-          </div>
-          <div>
-            <span
-              className={`font-heading font-800 text-xl tracking-wide transition-colors ${
-                scrolled ? 'text-brand-blue-dark' : 'text-white'
-              }`}
-              style={{ fontWeight: 800 }}
-            >
-              HOAK LABS
-            </span>
-            <p
-              className={`text-[10px] tracking-[0.2em] uppercase font-mono transition-colors leading-none ${
-                scrolled ? 'text-brand-gold-dark' : 'text-brand-gold'
-              }`}
-            >
-              Reviving Your Devices
-            </p>
-          </div>
+        <Link href="/" className="flex items-center group">
+          <img
+            src="/logo.png"
+            alt="HOAK Labs"
+            className="h-20 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Nav */}

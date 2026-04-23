@@ -47,24 +47,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-9 h-9">
-                <circle cx="8" cy="8" r="3" fill="#f5a800"/>
-                <circle cx="20" cy="4" r="3" fill="#f5a800"/>
-                <circle cx="32" cy="8" r="3" fill="#f5a800"/>
-                <circle cx="8" cy="32" r="3" fill="#f5a800"/>
-                <circle cx="20" cy="36" r="3" fill="#f5a800"/>
-                <circle cx="32" cy="20" r="3" fill="#f5a800"/>
-                <path d="M8 8 L8 20 L20 20" stroke="#f5a800" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M20 4 L20 20" stroke="#f5a800" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M32 8 L32 20" stroke="#f5a800" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M8 32 L20 32 L20 20" stroke="#f5a800" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M20 36 L20 32" stroke="#f5a800" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-              <div>
-                <p className="font-heading font-800 text-lg" style={{ fontWeight: 800 }}>HOAK LABS</p>
-                <p className="text-brand-gold text-[10px] tracking-widest uppercase font-mono">Reviving Your Devices</p>
-              </div>
+            <div className="flex items-center mb-4">
+              <img
+                src="/logo.png"
+                alt="HOAK Labs"
+                className="h-20 w-auto object-contain"
+              />
             </div>
             <p className="text-white/60 text-sm leading-relaxed font-body">
               Specialists in industrial automation repair and maintenance. Serving Pakistan&apos;s manufacturing sector with precision engineering.

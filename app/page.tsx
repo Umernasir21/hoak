@@ -6,63 +6,63 @@ import ScrollReveal from '@/components/ScrollReveal'
 const services = [
   {
     id: 'vfd',
-    icon: '⚡',
     title: 'VFD Services',
     subtitle: 'Variable Frequency Drives',
     description:
       'Comprehensive repair, troubleshooting, servicing, testing, and commissioning for all major VFD brands. Minimize downtime and maximize efficiency.',
     features: ['Repairing & Troubleshooting', 'Servicing & Testing', 'Commissioning'],
     href: '/services#vfd',
+    image: '/services/vfd.png',
   },
   {
     id: 'plc',
-    icon: '🖥',
-    title: 'PLC Systems',
+    title: 'PLC Services',
     subtitle: 'Programmable Logic Controllers',
     description:
       'Upgrade outdated control systems with modern PLCs for precise control, real-time monitoring, and significantly reduced operational downtime.',
     features: ['Precise Control', 'Real-time Monitoring', 'System Upgrades'],
     href: '/services#plc',
+    image: '/services/plc.png',
   },
   {
     id: 'servo',
-    icon: '⚙️',
     title: 'Servo Drive Repair',
     subtitle: 'All Brands Supported',
     description:
       'Expert servo drive diagnostics and repair with fast turnaround. Our engineers restore equipment to full factory specification.',
     features: ['All Major Brands', 'Free Diagnostic Quote', 'Fast Turnaround'],
     href: '/services#servo',
+    image: '/services/servo_drive.png',
   },
   {
     id: 'generator',
-    icon: '🔋',
     title: 'Generator Controllers',
     subtitle: 'Power Continuity Solutions',
     description:
       'Keep your power running with expert generator controller repair, synchronization, and maintenance services.',
     features: ['Synchronizing Controllers', 'DSE & ComAp Systems', 'Quick Fix Service'],
     href: '/services#generator',
+    image: '/services/generators_controllers.png',
   },
   {
     id: 'hmi',
-    icon: '📟',
     title: 'HMI Systems',
     subtitle: 'Human Machine Interface',
     description:
       'Repair and replacement of HMI panels, touchscreens, and display systems for seamless operator interaction with machinery.',
     features: ['Panel Repair', 'Screen Replacement', 'Software Updates'],
     href: '/services#hmi',
+    image: '/services/hmi_systems.png',
   },
   {
     id: 'control',
-    icon: '🔌',
     title: 'Control Cards & Drives',
     subtitle: 'DC Drives & Power Supplies',
     description:
       'Specialized repair of control cards, DC drives, and industrial power supply units across all industrial sectors.',
     features: ['Control Cards', 'DC Drives', 'Power Supplies'],
     href: '/services#control',
+    image: '/services/controlcards&drives.png',
   },
 ]
 
@@ -146,29 +146,38 @@ export default function HomePage() {
             {services.map((service, i) => (
               <ScrollReveal key={service.id} delay={i * 80}>
                 <Link href={service.href}>
-                  <div className="service-card bg-white rounded-2xl p-7 h-full shadow-sm cursor-pointer group">
-                    <p className="section-label mb-1">{service.subtitle}</p>
-                    <h3 className="font-heading text-3xl font-800 text-brand-blue-dark mb-3" style={{ fontWeight: 800 }}>
-                      {service.title}
-                    </h3>
-                    <p className="text-brand-gray-mid text-sm leading-relaxed font-body mb-5">
-                      {service.description}
-                    </p>
+                  <div className="service-card bg-white rounded-2xl overflow-hidden h-full shadow-sm cursor-pointer group flex flex-col">
+                    <div className="h-48 overflow-hidden flex-shrink-0">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-7 flex flex-col flex-1">
+                      <p className="section-label mb-1">{service.subtitle}</p>
+                      <h3 className="font-heading text-2xl font-800 text-brand-blue-dark mb-3" style={{ fontWeight: 800 }}>
+                        {service.title}
+                      </h3>
+                      <p className="text-brand-gray-mid text-sm leading-relaxed font-body mb-5">
+                        {service.description}
+                      </p>
 
-                    <ul className="space-y-1.5">
-                      {service.features.map((f) => (
-                        <li key={f} className="flex items-center gap-2 text-sm text-brand-gray-dark font-body">
-                          <span className="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0" />
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
+                      <ul className="space-y-1.5 mb-5">
+                        {service.features.map((f) => (
+                          <li key={f} className="flex items-center gap-2 text-sm text-brand-gray-dark font-body">
+                            <span className="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0" />
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
 
-                    <div className="mt-5 flex items-center gap-2 text-brand-blue text-sm font-600 group-hover:gap-3 transition-all" style={{ fontWeight: 600 }}>
-                      Learn More
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                      <div className="mt-auto flex items-center gap-2 text-brand-blue text-sm font-600 group-hover:gap-3 transition-all" style={{ fontWeight: 600 }}>
+                        Learn More
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -328,11 +337,11 @@ export default function HomePage() {
                 Get a Free Quote
               </Link>
               <a
-                href="tel:021-34536335"
+                href="tel:03332707900"
                 className="px-8 py-4 rounded-xl font-600 text-white text-base font-body border-2 border-white/30 hover:bg-white/10 hover:border-white/60 transition-all duration-200"
                 style={{ fontWeight: 600 }}
               >
-                Call: 021-34536335
+                Call: 03332707900
               </a>
             </div>
           </ScrollReveal>

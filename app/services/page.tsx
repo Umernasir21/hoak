@@ -23,6 +23,7 @@ const services = [
     causes: ['Power Supply Failures', 'CPU Board Failure', 'Power Board Failures', 'Encoder Card Faulty', 'Power Capacitor Weak/Faulty', 'Overheating Issues', 'Cooling System Failure'],
     brands: ['Siemens', 'ABB', 'Schneider', 'Mitsubishi', 'Yaskawa', 'INVT', 'Delta', 'Danfoss'],
     icon: '⚡',
+    image: '/services/vfd.png',
   },
   {
     id: 'plc',
@@ -44,6 +45,7 @@ const services = [
     causes: ['I/O Module Failures', 'Power Supply Faults', 'Communication Errors', 'Battery Failure', 'Program Corruption', 'Environmental Damage'],
     brands: ['Siemens S7', 'Allen-Bradley', 'Mitsubishi', 'Schneider Modicon', 'Omron', 'Delta', 'GE Fanuc'],
     icon: '🖥',
+    image: '/services/plc.png',
   },
   {
     id: 'servo',
@@ -65,6 +67,7 @@ const services = [
     causes: ['Overheating', 'Power Stage Failure', 'Encoder Faults', 'Control Board Damage', 'Power Supply Issues', 'Motor Winding Faults'],
     brands: ['Siemens Sinamics', 'Fanuc', 'Mitsubishi MR-J', 'Yaskawa Sigma', 'Bosch Rexroth', 'Beckhoff', 'Parker'],
     icon: '⚙️',
+    image: '/services/servo_drive.png',
   },
   {
     id: 'generator',
@@ -86,6 +89,7 @@ const services = [
     causes: ['AVR Failure', 'Controller Board Damage', 'Communication Faults', 'Sensor Failures', 'Battery/Charging Issues', 'Firmware Corruption'],
     brands: ['Deep Sea Electronics (DSE)', 'ComAp', 'Woodward', 'Stamford', 'Mecc Alte', 'Leroy Somer'],
     icon: '🔋',
+    image: '/services/generators_controllers.png',
   },
   {
     id: 'hmi',
@@ -107,6 +111,7 @@ const services = [
     causes: ['Touchscreen Failure', 'Display Issues', 'Communication Errors', 'Power Supply Faults', 'Software Corruption'],
     brands: ['Siemens TP/OP', 'Allen-Bradley PanelView', 'Mitsubishi GOT', 'Schneider Magelis', 'Weintek', 'Delta DOP', 'Proface'],
     icon: '📟',
+    image: '/services/hmi_systems.png',
   },
   {
     id: 'control',
@@ -128,6 +133,7 @@ const services = [
     causes: ['Component Failure', 'Overvoltage Damage', 'Moisture/Corrosion', 'Thermal Damage', 'Short Circuit Damage'],
     brands: ['All Makes', 'Custom PCBs', 'Industrial OEM Boards'],
     icon: '🔌',
+    image: '/services/controlcards&drives.png',
   },
 ]
 
@@ -135,7 +141,11 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-hero-gradient relative overflow-hidden">
+      <section className="pt-32 pb-20 relative overflow-hidden bg-brand-dark min-h-[480px]">
+        <div className="absolute right-0 inset-y-0 w-[52%]">
+          <img src="/headers/_services.jpg" alt="" className="w-full h-full object-cover" aria-hidden="true" />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, #0a1628 0%, rgba(10,22,40,0.55) 35%, transparent 65%)' }} />
+        </div>
         <div className="absolute inset-0 bg-grid-pattern opacity-20" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -215,6 +225,11 @@ export default function ServicesPage() {
               {/* Right: Cards */}
               <ScrollReveal delay={200}>
                 <div className="space-y-5">
+                  {/* Service image */}
+                  <div className="rounded-2xl overflow-hidden border border-brand-gray-light shadow-sm">
+                    <img src={service.image} alt={service.title} className="w-full h-56 object-cover" />
+                  </div>
+
                   {/* Common faults */}
                   <div className="bg-brand-blue-dark rounded-2xl p-7">
                     <h4 className="font-heading text-lg font-700 text-brand-gold mb-4" style={{ fontWeight: 700 }}>
@@ -251,11 +266,11 @@ export default function ServicesPage() {
                     <p className="text-white/80 text-sm font-body mt-1 mb-4">
                       Call us now for same-day assessment.
                     </p>
-                    <a href="tel:021-34536335" className="inline-flex items-center gap-2 bg-white text-brand-gold-dark text-sm font-700 font-body px-5 py-2.5 rounded-lg hover:bg-brand-off-white transition-colors" style={{ fontWeight: 700 }}>
+                    <a href="tel:03332707900" className="inline-flex items-center gap-2 bg-white text-brand-gold-dark text-sm font-700 font-body px-5 py-2.5 rounded-lg hover:bg-brand-off-white transition-colors" style={{ fontWeight: 700 }}>
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                       </svg>
-                      021-34536335
+                      03332707900
                     </a>
                   </div>
                 </div>

@@ -63,7 +63,11 @@ export default function IndustriesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-hero-gradient relative overflow-hidden">
+      <section className="pt-32 pb-20 relative overflow-hidden bg-brand-dark min-h-[480px]">
+        <div className="absolute right-0 inset-y-0 w-[52%]">
+          <img src="/headers/_industries.jpg" alt="" className="w-full h-full object-cover" aria-hidden="true" />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, #0a1628 0%, rgba(10,22,40,0.55) 35%, transparent 65%)' }} />
+        </div>
         <div className="absolute inset-0 bg-grid-pattern opacity-20" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">

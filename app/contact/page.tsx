@@ -42,7 +42,11 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-hero-gradient relative overflow-hidden">
+      <section className="pt-32 pb-20 relative overflow-hidden bg-brand-dark min-h-[480px]">
+        <div className="absolute right-0 inset-y-0 w-[52%]">
+          <img src="/headers/_contact.jpg" alt="" className="w-full h-full object-cover" aria-hidden="true" />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, #0a1628 0%, rgba(10,22,40,0.55) 35%, transparent 65%)' }} />
+        </div>
         <div className="absolute inset-0 bg-grid-pattern opacity-20" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -83,32 +87,20 @@ export default function ContactPage() {
                     {
                       icon: '📞',
                       label: 'Phone',
-                      value: '021-34536335',
-                      href: 'tel:021-34536335',
-                    },
-                    {
-                      icon: '📞',
-                      label: 'Mobile',
-                      value: '0333-2707016',
-                      href: 'tel:03332707016',
-                    },
-                    {
-                      icon: '📠',
-                      label: 'Landline',
-                      value: '021-34320494',
-                      href: 'tel:02134320494',
+                      value: '03332707900',
+                      href: 'tel:03332707900',
                     },
                     {
                       icon: '✉️',
                       label: 'Email',
-                      value: 'sales@hoakengineers.com',
-                      href: 'mailto:sales@hoakengineers.com',
+                      value: 'info@hoaklabs.com',
+                      href: 'mailto:info@hoaklabs.com',
                     },
                     {
                       icon: '🌐',
                       label: 'Website',
-                      value: 'www.hoakengineers.com',
-                      href: 'https://www.hoakengineers.com',
+                      value: 'www.hoaklabs.com',
+                      href: 'https://www.hoaklabs.com',
                     },
                   ].map((item) => (
                     <div key={item.label} className="flex gap-4 bg-white rounded-xl p-4 border border-brand-gray-light">
@@ -143,7 +135,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <p className="mt-4 text-brand-gold text-xs font-body">
-                    ⚡ Emergency repairs available 24/7 — call 0333-2707016
+                    ⚡ Emergency repairs available 24/7 — call 03332707900
                   </p>
                 </div>
               </ScrollReveal>
@@ -162,7 +154,7 @@ export default function ContactPage() {
                       Thank you for contacting HOAK Labs. Our team will review your request and get back to you within 2-4 business hours.
                     </p>
                     <p className="mt-4 text-sm text-brand-gray-mid font-body">
-                      For urgent queries, call: <a href="tel:021-34536335" className="text-brand-blue font-600">021-34536335</a>
+                      For urgent queries, call: <a href="tel:03332707900" className="text-brand-blue font-600">03332707900</a>
                     </p>
                   </div>
                 ) : (
@@ -309,7 +301,7 @@ export default function ContactPage() {
 
                       <p className="text-center text-brand-gray-mid text-xs font-body">
                         We respond within 2-4 business hours. For emergencies, call{' '}
-                        <a href="tel:021-34536335" className="text-brand-blue hover:underline">021-34536335</a>
+                        <a href="tel:03332707900" className="text-brand-blue hover:underline">03332707900</a>
                       </p>
                     </form>
                   </div>

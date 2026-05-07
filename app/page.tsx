@@ -5,6 +5,17 @@ import ScrollReveal from '@/components/ScrollReveal'
 // ─── Data ───────────────────────────────────────────────
 const services = [
   {
+    id: 'solar',
+    title: 'Solar Inverter Repair',
+    subtitle: 'All Types & Brands',
+    description:
+      'Expert diagnosis, repair, and maintenance for all solar inverter types — string, hybrid, and off-grid systems. Get your solar installation back to full efficiency with guaranteed results.',
+    features: ['String & Hybrid Inverters', 'MPPT Troubleshooting', 'Fast Turnaround'],
+    href: '/services#solar',
+    image: '/services/vfd.png',
+    featured: true,
+  },
+  {
     id: 'vfd',
     title: 'VFD Services',
     subtitle: 'Variable Frequency Drives',
@@ -125,6 +136,7 @@ export default function HomePage() {
           muted
           loop
           playsInline
+          preload="none"
           className="absolute inset-0 w-full h-full object-cover"
         />
       </section>
@@ -146,7 +158,12 @@ export default function HomePage() {
             {services.map((service, i) => (
               <ScrollReveal key={service.id} delay={i * 80}>
                 <Link href={service.href}>
-                  <div className="service-card bg-white rounded-2xl overflow-hidden h-full shadow-sm cursor-pointer group flex flex-col">
+                  <div className={`service-card bg-white rounded-2xl overflow-hidden h-full cursor-pointer group flex flex-col ${(service as any).featured ? 'shadow-gold-glow ring-2 ring-brand-gold' : 'shadow-sm'}`}>
+                    {(service as any).featured && (
+                      <div className="bg-brand-gold text-white text-xs font-mono font-600 px-4 py-2 text-center tracking-widest uppercase" style={{ fontWeight: 600 }}>
+                        ★ Featured Service
+                      </div>
+                    )}
                     <div className="h-48 overflow-hidden flex-shrink-0">
                       <img
                         src={service.image}
@@ -159,13 +176,13 @@ export default function HomePage() {
                       <h3 className="font-heading text-2xl font-800 text-brand-blue-dark mb-3" style={{ fontWeight: 800 }}>
                         {service.title}
                       </h3>
-                      <p className="text-brand-gray-mid text-sm leading-relaxed font-body mb-5">
+                      <p className="text-brand-gray-mid text-base leading-relaxed font-body mb-5">
                         {service.description}
                       </p>
 
                       <ul className="space-y-1.5 mb-5">
                         {service.features.map((f) => (
-                          <li key={f} className="flex items-center gap-2 text-sm text-brand-gray-dark font-body">
+                          <li key={f} className="flex items-center gap-2 text-base text-brand-gray-dark font-body">
                             <span className="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0" />
                             {f}
                           </li>
@@ -209,7 +226,7 @@ export default function HomePage() {
                   <h3 className="font-heading text-3xl font-700 text-white mb-3" style={{ fontWeight: 700 }}>
                     {benefit.title}
                   </h3>
-                  <p className="text-white/60 text-sm leading-relaxed font-body">{benefit.desc}</p>
+                  <p className="text-white/80 text-base leading-relaxed font-body">{benefit.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -250,7 +267,7 @@ export default function HomePage() {
                   <h3 className="font-heading text-xl font-700 text-brand-blue-dark mb-2" style={{ fontWeight: 700 }}>
                     {item.title}
                   </h3>
-                  <p className="text-brand-gray-mid text-sm leading-relaxed font-body">{item.desc}</p>
+                  <p className="text-brand-gray-mid text-base leading-relaxed font-body">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -284,7 +301,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Quote */}
-                  <p className="text-brand-gray-dark text-sm leading-relaxed font-body flex-1 italic">
+                  <p className="text-brand-gray-dark text-base leading-relaxed font-body flex-1 italic">
                     &ldquo;{t.quote}&rdquo;
                   </p>
 
@@ -296,8 +313,8 @@ export default function HomePage() {
                       </span>
                     </div>
                     <div>
-                      <p className="font-body font-600 text-sm text-brand-blue-dark" style={{ fontWeight: 600 }}>{t.author}</p>
-                      <p className="text-brand-gray-mid text-xs font-body">{t.role}</p>
+                      <p className="font-body font-600 text-base text-brand-blue-dark" style={{ fontWeight: 600 }}>{t.author}</p>
+                      <p className="text-brand-gray-mid text-sm font-body">{t.role}</p>
                     </div>
                   </div>
                 </div>

@@ -53,12 +53,12 @@ export default function AboutPage() {
                   highlight="Engineering"
                   subtitle="HOAK Labs was founded with a single mission: give industrial equipment a second life."
                 />
-                <p className="text-brand-gray-mid leading-relaxed font-body text-sm mb-4">
+                <p className="text-brand-gray-mid leading-relaxed font-body text-base mb-4">
                   What began as a small workshop in Karachi has grown into a trusted name across Pakistan&apos;s
                   industrial landscape. We started by repairing the variable frequency drives and PLCs that
                   factories were discarding as unrepairable — and proving them wrong.
                 </p>
-                <p className="text-brand-gray-mid leading-relaxed font-body text-sm mb-6">
+                <p className="text-brand-gray-mid leading-relaxed font-body text-base mb-6">
                   Today, HOAK Labs services clients across manufacturing, textiles, food processing, energy,
                   and more. Our team of certified engineers handles everything from basic VFD diagnostics to
                   complex PLC system upgrades, always with the same commitment to quality and speed.
@@ -88,7 +88,7 @@ export default function AboutPage() {
                   >
                     <p className="font-heading text-4xl font-900 text-brand-gold" style={{ fontWeight: 900 }}>{s.value}</p>
                     <p className="font-heading text-sm font-700 text-brand-blue-dark mt-1" style={{ fontWeight: 700 }}>{s.label}</p>
-                    <p className="text-brand-gray-mid text-xs font-body mt-0.5">{s.sub}</p>
+                    <p className="text-brand-gray-mid text-sm font-body mt-0.5">{s.sub}</p>
                   </div>
                 ))}
               </div>
@@ -153,7 +153,7 @@ export default function AboutPage() {
                 <div className="bg-white rounded-2xl p-7 text-center service-card shadow-sm">
                   <div className="text-4xl mb-4">{v.icon}</div>
                   <h3 className="font-heading text-xl font-700 text-brand-blue-dark mb-3" style={{ fontWeight: 700 }}>{v.title}</h3>
-                  <p className="text-brand-gray-mid text-sm leading-relaxed font-body">{v.desc}</p>
+                  <p className="text-brand-gray-mid text-base leading-relaxed font-body">{v.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -182,7 +182,7 @@ export default function AboutPage() {
                     <span className="font-heading text-2xl font-800 text-brand-gold" style={{ fontWeight: 800 }}>{member.initial}</span>
                   </div>
                   <h4 className="font-heading text-lg font-700 text-brand-blue-dark" style={{ fontWeight: 700 }}>{member.name}</h4>
-                  <p className="text-brand-gray-mid text-sm font-body mt-1">{member.role}</p>
+                  <p className="text-brand-gray-mid text-base font-body mt-1">{member.role}</p>
                   <span className="inline-block mt-2 bg-brand-gold/10 text-brand-gold-dark text-xs font-mono px-3 py-1 rounded-full">
                     {member.exp} Experience
                   </span>
@@ -211,7 +211,7 @@ export default function AboutPage() {
                 <div key={item.title} className="bg-white/10 border border-white/20 rounded-2xl p-7 hover:bg-white/15 transition-all duration-300">
                   <div className="text-3xl mb-3">{item.icon}</div>
                   <h3 className="font-heading text-xl font-700 text-white mb-2" style={{ fontWeight: 700 }}>{item.title}</h3>
-                  <p className="text-white/60 text-sm font-body">{item.desc}</p>
+                  <p className="text-white/80 text-base font-body">{item.desc}</p>
                 </div>
               ))}
             </div>

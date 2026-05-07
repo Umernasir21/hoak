@@ -155,7 +155,7 @@ export default function ProjectsPage() {
                         <span className="bg-brand-blue/10 text-brand-blue text-xs font-mono px-3 py-1.5 rounded-full">
                           {project.tag}
                         </span>
-                        <span className="text-brand-gray-mid text-xs font-body">{project.industry}</span>
+                        <span className="text-brand-gray-mid text-sm font-body">{project.industry}</span>
                       </div>
 
                       <h3 className="font-heading text-2xl font-800 text-brand-blue-dark mb-5" style={{ fontWeight: 800 }}>
@@ -165,17 +165,17 @@ export default function ProjectsPage() {
                       <div className="space-y-4">
                         <div>
                           <p className="section-label mb-1">The Challenge</p>
-                          <p className="text-brand-gray-mid text-sm font-body leading-relaxed">{project.challenge}</p>
+                          <p className="text-brand-gray-mid text-base font-body leading-relaxed">{project.challenge}</p>
                         </div>
                         <div>
                           <p className="section-label mb-1">Our Solution</p>
-                          <p className="text-brand-gray-mid text-sm font-body leading-relaxed">{project.solution}</p>
+                          <p className="text-brand-gray-mid text-base font-body leading-relaxed">{project.solution}</p>
                         </div>
                       </div>
 
                       <div className="mt-5 flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
-                          <span key={tag} className="bg-brand-off-white text-brand-gray-dark text-xs font-body px-2.5 py-1 rounded-lg border border-brand-gray-light">
+                          <span key={tag} className="bg-brand-off-white text-brand-gray-dark text-sm font-body px-2.5 py-1 rounded-lg border border-brand-gray-light">
                             {tag}
                           </span>
                         ))}

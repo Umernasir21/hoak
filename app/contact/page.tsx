@@ -5,6 +5,7 @@ import SectionHeader from '@/components/SectionHeader'
 import ScrollReveal from '@/components/ScrollReveal'
 
 const serviceOptions = [
+  'Solar Inverter Repair',
   'VFD Repair / Maintenance',
   'PLC Services / Upgrades',
   'Servo Drive Repair',
@@ -162,7 +163,7 @@ export default function ContactPage() {
                     <h3 className="font-heading text-2xl font-800 text-brand-blue-dark mb-2" style={{ fontWeight: 800 }}>
                       Request a Free Quote
                     </h3>
-                    <p className="text-brand-gray-mid text-sm font-body mb-8">
+                    <p className="text-brand-gray-mid text-base font-body mb-8">
                       Fill in the details below and our team will get back to you with a diagnosis plan and quote.
                     </p>
 
@@ -273,7 +274,7 @@ export default function ContactPage() {
                                 className="sr-only"
                               />
                               <p className="font-body font-600 text-sm text-brand-blue-dark" style={{ fontWeight: 600 }}>{opt.label}</p>
-                              <p className="text-brand-gray-mid text-xs font-body mt-0.5">{opt.sub}</p>
+                              <p className="text-brand-gray-mid text-sm font-body mt-0.5">{opt.sub}</p>
                             </label>
                           ))}
                         </div>
@@ -299,7 +300,7 @@ export default function ContactPage() {
                         Submit Request — Get Free Quote
                       </button>
 
-                      <p className="text-center text-brand-gray-mid text-xs font-body">
+                      <p className="text-center text-brand-gray-mid text-sm font-body">
                         We respond within 2-4 business hours. For emergencies, call{' '}
                         <a href="tel:03332707900" className="text-brand-blue hover:underline">03332707900</a>
                       </p>

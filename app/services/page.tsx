@@ -4,6 +4,28 @@ import ScrollReveal from '@/components/ScrollReveal'
 
 const services = [
   {
+    id: 'solar',
+    tag: 'SOLAR',
+    title: 'Solar Inverter Repair',
+    subtitle: 'All Types & Brands Supported',
+    description:
+      'Solar inverters are the heart of any solar power system. When they fail, your entire investment stops producing. HOAK Labs provides expert solar inverter repair, diagnostics, and maintenance for residential, commercial, and industrial solar systems of all types.',
+    services: [
+      'Complete solar inverter overhaul',
+      'MPPT controller diagnostics & repair',
+      'DC-AC conversion stage repair',
+      'Grid-tie inverter servicing',
+      'Hybrid inverter repair & setup',
+      'Battery management system repair',
+      'Monitoring system troubleshooting',
+      'Firmware update & re-commissioning',
+    ],
+    causes: ['IGBT/MOSFET Failure', 'Capacitor Degradation', 'MPPT Failure', 'Overheating', 'Surge/Lightning Damage', 'Communication Errors', 'Display Faults'],
+    brands: ['Huawei', 'SolarEdge', 'SMA', 'Fronius', 'Growatt', 'Sungrow', 'Goodwe', 'Deye', 'Sofar Solar', 'Voltronic'],
+    icon: '☀️',
+    image: '/services/vfd.png',
+  },
+  {
     id: 'vfd',
     tag: 'VFD',
     title: 'Variable Frequency Drives',
@@ -200,7 +222,7 @@ export default function ServicesPage() {
                   </h2>
                   <p className="text-brand-gold-dark text-sm font-mono mt-1 mb-4">{service.subtitle}</p>
                   <div className="gold-line mb-6" />
-                  <p className="text-brand-gray-mid leading-relaxed font-body text-sm mb-8">
+                  <p className="text-brand-gray-mid leading-relaxed font-body text-base mb-8">
                     {service.description}
                   </p>
 
@@ -211,7 +233,7 @@ export default function ServicesPage() {
                         <svg className="w-4 h-4 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                         </svg>
-                        <span className="text-brand-gray-dark text-xs font-body leading-snug">{item}</span>
+                        <span className="text-brand-gray-dark text-sm font-body leading-snug">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -237,7 +259,7 @@ export default function ServicesPage() {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {service.causes.map((c) => (
-                        <span key={c} className="bg-white/10 text-white/80 text-xs font-body px-3 py-1.5 rounded-lg border border-white/10">
+                        <span key={c} className="bg-white/10 text-white/90 text-sm font-body px-3 py-1.5 rounded-lg border border-white/10">
                           {c}
                         </span>
                       ))}
@@ -251,7 +273,7 @@ export default function ServicesPage() {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {service.brands.map((b) => (
-                        <span key={b} className="bg-brand-off-white text-brand-blue text-xs font-mono px-3 py-1.5 rounded-lg border border-brand-gray-light hover:border-brand-gold/40 transition-colors">
+                        <span key={b} className="bg-brand-off-white text-brand-blue text-sm font-mono px-3 py-1.5 rounded-lg border border-brand-gray-light hover:border-brand-gold/40 transition-colors">
                           {b}
                         </span>
                       ))}

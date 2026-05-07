@@ -104,14 +104,14 @@ export default function IndustriesPage() {
                   <h3 className="font-heading text-2xl font-800 text-brand-blue-dark mb-3" style={{ fontWeight: 800 }}>
                     {industry.title}
                   </h3>
-                  <p className="text-brand-gray-mid text-sm leading-relaxed font-body mb-5">
+                  <p className="text-brand-gray-mid text-base leading-relaxed font-body mb-5">
                     {industry.description}
                   </p>
 
                   {/* Applications */}
                   <div className="flex flex-wrap gap-2 mb-5">
                     {industry.applications.map((app) => (
-                      <span key={app} className="bg-brand-off-white text-brand-gray-dark text-xs font-body px-2.5 py-1 rounded-lg border border-brand-gray-light">
+                      <span key={app} className="bg-brand-off-white text-brand-gray-dark text-sm font-body px-2.5 py-1 rounded-lg border border-brand-gray-light">
                         {app}
                       </span>
                     ))}
@@ -119,7 +119,7 @@ export default function IndustriesPage() {
 
                   {/* Benefit */}
                   <div className="bg-brand-gold/10 border-l-4 border-brand-gold rounded-r-xl p-4">
-                    <p className="text-brand-gold-dark text-xs font-body leading-relaxed">
+                    <p className="text-brand-gold-dark text-sm font-body leading-relaxed">
                       {industry.benefit}
                     </p>
                   </div>
@@ -155,7 +155,7 @@ export default function IndustriesPage() {
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:border-brand-gold/30 hover:bg-white/10 transition-all duration-300">
                   <div className="text-4xl mb-4">{item.icon}</div>
                   <h3 className="font-heading text-xl font-700 text-white mb-3" style={{ fontWeight: 700 }}>{item.title}</h3>
-                  <p className="text-white/60 text-sm font-body">{item.desc}</p>
+                  <p className="text-white/85 text-base font-body">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}

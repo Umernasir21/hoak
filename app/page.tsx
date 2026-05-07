@@ -129,7 +129,7 @@ export default function HomePage() {
   return (
     <>
       {/* ═══ HERO ═══════════════════════════════════════ */}
-      <section className="relative w-full" style={{ height: '100vh' }}>
+      <section className="relative w-full bg-brand-dark" style={{ height: '100vh' }}>
         <video
           src="/hero-video.mp4"
           autoPlay
@@ -137,7 +137,7 @@ export default function HomePage() {
           loop
           playsInline
           preload="none"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain md:object-cover"
         />
       </section>
 

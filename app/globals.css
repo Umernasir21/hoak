@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 :root {
   --font-heading: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
-  --font-body: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  --font-body: 'Poppins', sans-serif;
   --font-mono: 'DM Mono', 'Courier New', monospace;
   --brand-blue: #1a3a8f;
   --brand-blue-dark: #0d2260;
@@ -27,6 +27,10 @@
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
   letter-spacing: -0.01em;
+}
+
+p, li, span, label, input, textarea, select, button {
+  font-family: var(--font-body);
 }
 
 /* ─── Animated underline link ─── */

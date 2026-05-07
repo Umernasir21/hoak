@@ -26,7 +26,7 @@ module.exports = {
       },
       fontFamily: {
         heading: ["'Century Gothic'", 'CenturyGothic', 'AppleGothic', 'sans-serif'],
-        body: ["'Century Gothic'", 'CenturyGothic', 'AppleGothic', 'sans-serif'],
+        body: ["'Poppins'", 'sans-serif'],
         mono: ["'DM Mono'", "'Courier New'", 'monospace'],
       },
       backgroundImage: {

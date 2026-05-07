@@ -40,11 +40,13 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center group">
-          <img
-            src="/logo.png"
-            alt="HOAK Labs"
-            className="h-20 w-auto object-contain"
-          />
+          <div className={`transition-all duration-300 ${scrolled ? 'bg-brand-blue-dark rounded-xl px-3 py-1' : ''}`}>
+            <img
+              src="/logo-dark.svg"
+              alt="HOAK Labs"
+              className="h-16 w-auto object-contain"
+            />
+          </div>
         </Link>
 
         {/* Desktop Nav */}

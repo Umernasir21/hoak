@@ -51,9 +51,9 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
               <img
-                src="/logo.png"
+                src="/logo-dark.svg"
                 alt="HOAK Labs"
-                className="h-20 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
             </div>
             <p className="text-white/85 text-sm leading-relaxed font-body">
